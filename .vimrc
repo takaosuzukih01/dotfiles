@@ -1,14 +1,29 @@
 filetype plugin indent on
 
-"フォーマット指定
+"エンコーディング
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,cp932,euc-jp
+scriptencoding utf-8
+
+"行番号を表示
 set number
+"タブの代わりにスペースを使う
 set expandtab
+"タブの幅
 set tabstop=2
+"インデントの幅
 set shiftwidth=2
+"自動でインデント
 set autoindent
+"{}などでいい感じにインデント入れてくれる
 set smartindent
+"デフォルトの色設定
 syntax on
+"バックスペースで前の行まで戻れるように
 set backspace=indent,eol,start
+"インクリメンタルサーチ
 set incsearch
 
 

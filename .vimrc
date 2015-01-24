@@ -25,7 +25,12 @@ syntax on
 set backspace=indent,eol,start
 "インクリメンタルサーチ
 set incsearch
-
+"検索が最後まで進んだら、先頭に戻る
+set wrapscan
+"カーソル位置を表示
+set ruler
+"折り返さない
+set nowrap
 
 "D言語コンパイル
 nnoremap <F5> <ESC>:call RUN()<ENTER>
@@ -43,6 +48,12 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 "plugins begin
+
+"Unite
+NeoBundle 'Shougo/unite.vim'
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable=1
+let g:unite_source_file_mru_limit=200
 
 "plugins end
 call neobundle#end()

@@ -40,6 +40,8 @@ endfunction
 
 "キーバインド
 inoremap <C-j> <ESC>
+nnoremap <C-e> :VimFiler -split -simple -winwidth=35 -no-quit<ENTER>
+nnoremap <C-b> <C-w>l:Unite buffer<ENTER><ESC>
 
 "NeoBundle Begin
 if has('vim_starting')
@@ -55,8 +57,14 @@ let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable=1
 let g:unite_source_file_mru_limit=200
 
+"vimfiler
+NeoBundle 'Shougo/vimfiler'
+"vimproc
+NeoBundle 'Shougo/vimproc'
+
 "plugins end
 call neobundle#end()
 "NeoBundle End
 
 filetype plugin indent on
+
